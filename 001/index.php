@@ -157,6 +157,36 @@ echo "<span style='color: $pC'> $p </span>
     <span style='color: $popC'> $pop </span>
     <span style='color: $papC'> $pap </span>";
 
+/* 
+8. Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. 
+Parašykite programą, kuri skaičiuos žvakių kainą ir atspausdintų atsakymą kiek žvakių ir kokia kaina perkama. 
+Žvakių kiekį generuokite ​rand()​ funkcija nuo 5 iki 3000.
+*/
+echo '<br>';
+
+$kaina = 1;
+$zvakes = rand(5, 3000);
+echo $zvakes, ' zvakiu';
+echo '<br>';
+if($zvakes >= 1000 && $zvakes < 2000) {
+    $SuNuolaida3 = ($kaina * $zvakes) / 100 * 3;
+    $kaina3 = ($kaina * $zvakes) - $SuNuolaida3;
+    echo $kaina3, '  ','EUR', ' - ',  "kaina su 3% nuolaida";
+    
+
+}
+echo '<br>';
+if($zvakes >= 2000) {
+    $nuolaida4 = ($kaina * $zvakes) / 100 * 4;
+    $kaina4 = ($kaina * $zvakes) - $nuolaida4;
+    echo $kainsSuNuolaida4, '  ','EUR', ' - ',  "kaina su 4% nuolaida";
+} 
+if($zvakes < 1000){
+    echo 'Nuolaidos nera';
+}
+
+
+
 
 
 
