@@ -175,26 +175,16 @@ if($zvakes >= 1000 && $zvakes < 2000) {
     
 
 }
-echo '<br>';
+
 if($zvakes >= 2000) {
     $nuolaida4 = ($kaina * $zvakes) / 100 * 4;
     $kaina4 = ($kaina * $zvakes) - $nuolaida4;
     echo $kainsSuNuolaida4, '  ','EUR', ' - ',  "kaina su 4% nuolaida";
+    
 } 
 if($zvakes < 1000){
+    
     echo 'Nuolaidos nera';
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
