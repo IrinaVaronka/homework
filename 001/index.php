@@ -96,7 +96,70 @@ foreach (count_chars($all, 1) as $i => $val) {
     echo "\"" , chr($i) , "\" occurs in the line $val time(s).\n";
  }
 
- 
+/* 
+6. Naudokite funkcija rand(). Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir jį atspausdinkite atitinkame h tage. 
+Pvz skaičius 3- rezultatas: <h3>3</h3>
+
+*/
+
+echo '<br>';
+
+$p = rand(1, 6);
+
+echo "<h$p>$p</h$p>";
+
+// if ($p === 1) {
+//    echo "<h1>$p</h1>"; 
+// } elseif ($p === 2) {
+//     echo "<h2>$p</h2>"; 
+//  } elseif ($p === 3) {
+//     echo "<h3>$p</h3>"; 
+//  } elseif ($p === 4) {
+//     echo "<h4>$p</h4>"; 
+//  } elseif ($p === 5) {
+//     echo "<h5>$p</h5>"; 
+//  } elseif ($p === 6) {
+//     echo "<h6>$p</h6>"; 
+//  } 
+
+
+ /*
+7. Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. 
+Skaičiai mažesni už 0 turi būti žali, 0 - raudonas, didesni už 0 mėlyni. 
+ */
+
+echo '<br>';
+
+$p = rand(-10, 10);
+$pop = rand(-10, 10);
+$pap = rand(-10, 10);
+
+$pC = match($p <=> 0) {
+    -1 => 'green',
+    0 => 'red',
+    1 => 'blue', 
+};
+
+$popC = match($pop <=> 0) {
+    -1 => 'green',
+    0 => 'red',
+    1 => 'blue', 
+};
+
+$papC = match($pap <=> 0) {
+    -1 => 'green',
+    0 => 'red',
+    1 => 'blue', 
+};
+
+
+echo "<span style='color: $pC'> $p </span>
+    <span style='color: $popC'> $pop </span>
+    <span style='color: $papC'> $pap </span>";
+
+
+
+
 
 
 
