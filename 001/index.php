@@ -264,6 +264,45 @@ echo 'filtrouta aritmetinį vidurkį: ', (int)($averageSum2);
 
 
 
+/*
+10. Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes. 
+Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją rand(). Sugeneruokite skaičių nuo 0 iki 300. 
+Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir 
+po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
+*/
+echo '<br>';
+echo '--------10-----------';
+echo '<br>';
+
+$hour = rand(0, 23);
+$min = rand (0, 59);
+$sec = rand (0, 59);
+
+$extraSeconds = rand(0, 300);
+echo 'Extra seconds are: ', $extraSeconds;
+
+$clock = "$hour : $min : $sec";
+
+
+     
+    $sec1 = $extraSeconds % 60;  
+    $extraSeconds = floor($extraSeconds / 60);
+    $min1 = $extraSeconds % 60;
+    $extraSeconds = floor($extraSeconds / 60);
+ 
+    $clock1 = $extraSeconds+$hour . " : " . $min+$min1 . " : " . $sec+$sec1;
+
+
+    echo '<br>';
+    echo 'Clock before extra seconds: ' . $clock;
+    echo '<br>';
+    echo 'Clock after extra seconds: ' . $clock1;
+    echo '<br>';
+
+
+
+
+
 ?>
 </body> 
 </html>
