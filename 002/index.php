@@ -126,6 +126,51 @@ $life = "It's a Wonderful Life";
 $life = str_replace($vowels, "", $life);
 echo $life;
 
+
+echo '<br>';
+echo '--------8-----------';
+echo '<br>';
+
+/*
+Stringe, kurį generuoja toks kodas: 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope'; 
+Surasti ir atspausdinti epizodo numerį.
+*/
+
+$a = 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
+
+echo $a;
+
+preg_match('/\d/', $a, $result);
+
+echo '<pre>';
+print_r($result[0]);
+
+
+echo '<br>';
+echo '--------9-----------';
+echo '<br>';
+/*
+Suskaičiuoti kiek stringe “Don't Be a Menace to South Central While Drinking Your Juice in the Hood” 
+yra žodžių trumpesnių arba lygių nei 5 raidės. 
+Pakartokite kodą su stringu “Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale”.
+*/
+
+$p1 = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
+
+$p2 = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
+
+$result = str_word_count($p2, 1, 'ąų');
+echo '<pre>';
+print_r($result);
+
+$count = 0;
+foreach ($result as $word) {
+    if(mb_strlen($word) <= 5) {
+        $count++;
+    }
+}
+echo "<h2>$count</h2>";
+
  
 ?>
 </body>
