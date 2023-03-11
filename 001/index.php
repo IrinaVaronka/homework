@@ -297,11 +297,32 @@ $clock = "$hour : $min : $sec";
     echo 'Clock before extra seconds: ' . $clock;
     echo '<br>';
     echo 'Clock after extra seconds: ' . $clock1;
-    echo '<br>';
+    
 
 
 
+/*
+Papildomas.
+11. Naudokite funkcija rand(). Sugeneruokite 6 kintamuosius su atsitiktinem reikšmėm nuo 1000 iki 9999. 
+Atspausdinkite reikšmes viename strige, išrūšiuotas nuo didžiausios iki mažiausios, atskirtas tarpais. 
+Naudoti ciklų ir masyvų NEGALIMA.
+*/
+echo '<br>';
+echo '--------11-----------';
+echo '<br>';
 
+
+
+$k1 = rand(1000, 9999);
+$k2 = rand(1000, 9999);
+$k3 = rand(1000, 9999);
+$k4 = rand(1000, 9999);
+$k5 = rand(1000, 9999);
+$k6 = rand(1000, 9999);
+
+ echo $k1;
+ echo '<br>';
+ echo $k2;
 
 ?>
 </body> 
