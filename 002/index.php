@@ -172,5 +172,16 @@ foreach ($result as $word) {
 echo "<h2>$count</h2>";
 
  
+echo '<br>';
+echo '--------10-----------';
+echo '<br>';
+/*
+Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
+*/
+
+$lotyn = chr(rand(97,122)) . chr(rand(97,122)) . chr(rand(97,122));
+echo $lotyn;
+
+
 ?>
 </body>
