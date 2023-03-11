@@ -84,6 +84,48 @@ $rezultat = str_replace($toChange, "*", $film);
 echo $rezultat;
 
 
+echo '<br>';
+echo '--------6-----------';
+echo '<br>';
+/*
+Sukurti kintamąjį su stringu: “An American in Paris”. 
+Suskaičiuoti visas “a” (didžiąsias ir mažąsias) raides. 
+Rezultatą atspausdinti.
+*/
+
+$film = 'An American in Paris';
+echo substr_count($film, 'a') + substr_count($film, 'A'); 
+
+echo '<br>';
+echo '--------7-----------';
+echo '<br>';
+
+/*
+Sukurti kintamąjį su stringu: “An American in Paris”. 
+Jame ištrinti visas balses. Rezultatą atspausdinti. 
+Kodą pakartoti su stringais: “Breakfast at Tiffany's”, “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+*/
+
+$film = 'An American in Paris';
+$vowels = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
+$flm = str_replace($vowels, "", $film);
+echo $flm;
+
+echo '<br>';
+$breakfast = "Breakfast at Tiffany's";
+$breakfast = str_replace($vowels, "", $breakfast);
+echo $breakfast;
+
+echo '<br>';
+$space = "2001: A Space Odyssey";
+$space = str_replace($vowels, "", $space);
+echo $space;
+
+echo '<br>';
+$life = "It's a Wonderful Life";
+$life = str_replace($vowels, "", $life);
+echo $life;
+
  
 ?>
 </body>
