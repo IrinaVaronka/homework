@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW</title>
-    <link rel="stylesheet" href="main.css">
+    <title>HW-3</title>
+    
 </head>
 <body>
 
@@ -17,10 +17,39 @@ a) Naudodami css stilių “suskaldykite” liniją taip, kad visos žvaigždut�
 b) Programiškai “suskaldykite” žvaigždutes taip, kad vienoje eilutėje nebūtų daugiau nei 50 “*”; 
 */
 
+echo '--------1-----------';
+echo '<br>';
+
+?>
+
+<div style="word-wrap: break-word;">
+
+<?php
+for ($i=0; $i < 400; $i++) { 
+    echo '*';
+}
+?>
+</div>
+
+
+<?php
+echo '<br>';
+for ($i = 1; $i < 400; $i++) {
+    echo '*';
+    if ($i % 50 == 0) {
+        echo '<br>';
+    }
+}
+
 /*
 2. Sugeneruokit 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais 
 ir suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
 */
+
+echo '<br>';
+echo '--------2-----------';
+echo '<br>';
+
 $filtered = 0;
 
 for ($i = 0; $i <= 300; $i++) { 
@@ -47,6 +76,10 @@ Po paskutinio skaičiaus kablelio neturi būti. Jeigu reikia, panaudokite css, k
 */
 
 echo '<br>';
+echo '--------3-----------';
+echo '<br>';
+
+
 $arr = [];
 $setRand = rand(3000, 4000);
 for ($i=1; $i <= $setRand; $i++) { 
@@ -56,9 +89,20 @@ for ($i=1; $i <= $setRand; $i++) {
 } 
 echo implode(", ", $arr);
 
+echo '<br>';
+echo '--------4-----------';
+echo '<br>';
+
+/*
+Nupieškite kvadratą iš “*”, kurio kraštines sudaro 100 “*”. Panaudokite css stilių, kad kvadratas ekrane atrodytų kvadratinis.
+*/
+
+
+    
 
 
 ?>
-</body>
+</body> 
+</html>
 
 

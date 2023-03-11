@@ -102,5 +102,6 @@ print_r($users);
 
 
 ?>
-</body>
+</body> 
+</html>
 
