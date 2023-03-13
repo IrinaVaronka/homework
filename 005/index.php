@@ -71,7 +71,7 @@ foreach($value as $k => $v)
 echo "Max value: $max <br>";
 
 /*
-Suskaičiuokite kiekvieno antro lygio masyvų su vienodais indeksais sumas (t.y. suma reikšmių turinčių indeksą 0, 1 ir t.t.)
+c) Suskaičiuokite kiekvieno antro lygio masyvų su vienodais indeksais sumas (t.y. suma reikšmių turinčių indeksą 0, 1 ir t.t.)
 */
 $count = 0;
 foreach ($masivas as $i => $value) {
@@ -84,3 +84,14 @@ foreach ($masivas as $i => $value) {
     };
 
  echo "Sum of indexes: $count0, $count1, $count2, $count3, $count4"; 
+
+
+ echo '<br>';
+ // d.Visus antro lygio masyvus “pailginkite” iki 7 elementų
+
+foreach ($masivas as $y => $value4) {
+        $masivas[$y][5] = rand(1,4);
+        $masivas[$y][6] = rand(1,4);
+}
+ 
+ print_r([$masivas]);
